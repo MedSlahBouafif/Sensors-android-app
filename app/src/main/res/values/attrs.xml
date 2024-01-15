@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="MapView">
+        <attr name="android:apiKey" format="string" />
+    </declare-styleable>
+</resources>
