@@ -1,0 +1,14 @@
+<!-- res/layout/menu_item.xml -->
+
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuImageView"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:layout_gravity="start"
+    android:background="@drawable/bg_rowview"
+    android:src="@drawable/img_lock"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:onClick="onMenuItemClick"/>

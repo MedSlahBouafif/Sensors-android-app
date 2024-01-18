@@ -1,0 +1,292 @@
+<!-- res/layout/activity_details.xml -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/detailImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Item Name -->
+    <TextView
+        android:id="@+id/detailTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Item Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailImageView" />
+
+    <!-- Item Description -->
+    <TextView
+        android:id="@+id/detailDescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_120pxh"
+        android:layout_marginTop="8dp"
+        android:text="Item Description"
+        app:layout_constraintBottom_toTopOf="@id/horizontalLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailTextView" />
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailDescriptionTextView" />
+
+    <!-- Location Image -->
+    <ImageView
+        android:id="@+id/locationImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalLine" />
+
+    <!-- Location Text -->
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:text="Location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalLine" />
+
+    <!-- Phone Image -->
+    <ImageView
+        android:id="@+id/phoneImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/locationImageView" />
+
+    <!-- Phone Text -->
+    <TextView
+        android:id="@+id/phoneLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:text="Phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/phoneImageView" />
+
+    <!-- Clock Image -->
+    <ImageView
+        android:id="@+id/clockImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_clock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneImageView"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Clock Text -->
+    <TextView
+        android:id="@+id/clockLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Clock"
+        app:layout_constraintStart_toEndOf="@+id/clockImageView"
+        app:layout_constraintTop_toBottomOf="@+id/phoneLabel"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Comparison Table -->
+    <TableLayout
+        android:id="@+id/comparisonTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clockLabel">
+
+        <!-- Header Row -->
+        <TableRow
+            android:background="#E0E0E0"
+            android:padding="12dp">
+
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Environment"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Campsite"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Current"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <!-- Add more columns as needed -->
+        </TableRow>
+
+        <!-- Data Rows -->
+        <TableRow
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="🌡️"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Temperature"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Data 2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="@dimen/_100pxh"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="Data 3"
+                android:textSize="18sp"/>
+            <!-- Add more columns as needed -->
+        </TableRow>
+
+        <!-- Additional Data Rows with Alternating Colors -->
+        <TableRow
+            android:background="#F5F5F5"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="🌬️"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Pressure"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Data 5"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="Data 6"
+                android:textSize="18sp"/>
+        </TableRow>
+
+        <TableRow
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="💧"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Humidity"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Data 8"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="Data 9"
+                android:textSize="18sp"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/reservationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#4CAF50"
+        android:text="Make Reservation"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

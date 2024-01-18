@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.BODY_SENSORS" />
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,7 +24,7 @@
         android:theme="@style/Theme.Sensors"
         tools:targetApi="31">
         <activity
-            android:name=".gps.MapsActivity"
+            android:name=".tinder.TinderActivity"
             android:theme="@style/AppTheme"
             android:exported="true">
             <intent-filter>
@@ -31,6 +32,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="tn.esprit.sensors.reservations.DetailsActivity"
+            android:label="Details Activity">
+        </activity>
+        <activity
+            android:name="tn.esprit.sensors.reservations.CheckReclamationsActivity"
+            android:label="Check Reclamations Activity">
+        </activity>
+        <activity
+            android:name="tn.esprit.sensors.reservations.UpdateReservationActivity"
+            android:label="Update Reservation Activity">
+        </activity>
+        <activity
+            android:name=".reservations.UtilsActivity"
+            android:label="Utils Activity"/>
+        <activity
+            android:name="tn.esprit.sensors.reservations.FinalReservationActivity"
+            android:label="Final Reservation Activity">
         </activity>
         <activity android:name=".gps.Routes"
             android:exported="false" />

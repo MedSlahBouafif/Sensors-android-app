@@ -1,0 +1,82 @@
+<!-- res/layout/activity_final_reservation.xml -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Date Picker -->
+
+    <!-- Time Picker -->
+
+    <!-- Number Picker -->
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="@dimen/_350pxh"
+        android:layout_height="386dp"
+        android:calendarViewShown="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Increment Button -->
+
+    <!-- Decrement Button -->
+
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="@dimen/_350pxh"
+        android:layout_height="357dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirmReservationButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/campersCounter"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Number of Campers: 1"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirmReservationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/incrementButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/square_button_background"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/decrementButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/square_button_background"
+        android:src="@drawable/minus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/incrementButton" />
+
+    <Button
+        android:id="@+id/confirmReservationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

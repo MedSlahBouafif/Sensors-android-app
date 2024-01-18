@@ -5,11 +5,14 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-@Database(entities = {User.class},version = 5,exportSchema = false)
+@Database(entities = {User.class}, version = 2, exportSchema = false)
 public abstract class UserDatabase extends RoomDatabase {
-    public abstract UserDao getUserDao();
+
     private static UserDatabase instance;
-    public static UserDatabase getInstance(Context context) {
+
+    public abstract UserDao getUserDao();
+
+    public static synchronized UserDatabase getInstance(Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
                             UserDatabase.class, "UserDatabase")

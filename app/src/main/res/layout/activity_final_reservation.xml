@@ -1,0 +1,112 @@
+<!-- res/layout/activity_final_reservation.xml -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Your main content -->
+
+    <!-- Toolbar -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Increment Button -->
+        <!-- Decrement Button -->
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="352dp"
+            android:layout_height="327dp"
+            android:layout_marginTop="68dp"
+            android:calendarViewShown="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="@dimen/_350pxh"
+            android:layout_height="357dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+        <TextView
+            android:id="@+id/campersCounter"
+            android:layout_width="115dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:text="Campers: 1"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/incrementButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/square_button_background"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintStart_toEndOf="@+id/decrementButton"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+        <ImageButton
+            android:id="@+id/decrementButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/square_button_background"
+            android:src="@drawable/minus"
+            app:layout_constraintStart_toEndOf="@+id/campersCounter"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+        <Button
+            android:id="@+id/confirmReservationButton"
+            android:layout_width="128dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="Confirm Reservation"
+            app:layout_constraintStart_toEndOf="@+id/incrementButton"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/_light_green"
+            app:title="Camping Checklist"
+            app:titleTextColor="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <!-- Menu items will be displayed here -->
+            <ImageView
+                android:id="@+id/toolbarImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_megaphone"
+                android:layout_gravity="end"
+                android:padding="8dp"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

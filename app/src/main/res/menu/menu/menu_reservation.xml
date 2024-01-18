@@ -1,0 +1,17 @@
+<!-- res/menu/drawer_menu.xml -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_1"
+        android:title="Chack Reclamations"
+        app:actionLayout="@layout/menu_item"/>
+    <item
+        android:id="@+id/menu_2"
+        android:title="Make Reservations"
+        app:actionLayout="@layout/menu_item"/>
+    <item
+        android:id="@+id/menu_3"
+        android:title="Utilities"
+        app:actionLayout="@layout/menu_item"/>
+</menu>

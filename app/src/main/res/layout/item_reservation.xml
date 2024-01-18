@@ -1,0 +1,46 @@
+<!-- res/layout/item_reservation.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Details TextView -->
+   <TextView
+    android:id="@+id/detailsTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:textColor="@android:color/black"
+    android:textStyle="bold"
+    android:layout_marginBottom="8dp"
+    android:text="@{reservation.details}"/>
+
+    <!-- Buttons (Update and Delete) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Update Button -->
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Update"
+            android:background="@drawable/rectangle_bg_amber_500_radius_10"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            android:background="@drawable/rectangle_bg_blue_700_radius_15"/>
+    </LinearLayout>
+</LinearLayout>

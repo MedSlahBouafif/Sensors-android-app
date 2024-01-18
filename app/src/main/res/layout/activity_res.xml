@@ -1,0 +1,85 @@
+<!-- res/layout/activity_res.xml -->
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- Search Bar -->
+
+        <!-- Text above Popular Items RecyclerView -->
+        <TextView
+            android:id="@+id/textViewPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Popular Items"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Popular Items RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPopular"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_below="@id/textViewPopular"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:clipToPadding="false"
+            android:background="@drawable/card_background"/>
+
+        <!-- Text above Recommended Items RecyclerView -->
+        <TextView
+            android:id="@+id/textViewRecommended"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerViewPopular"
+            android:layout_marginTop="16dp"
+            android:text="Recommended Items"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Recommended Items RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewRecommended"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_below="@id/textViewRecommended"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:clipToPadding="false"
+            android:background="@drawable/card_background"/>
+
+
+        <!-- Floating Action Button to open the drawer -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/openDrawerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="22dp"
+            android:backgroundTint="@color/green"
+            android:src="@drawable/ic_drawer_icon"/>
+
+    </RelativeLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_reservation" >
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

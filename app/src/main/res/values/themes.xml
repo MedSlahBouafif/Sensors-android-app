@@ -1,9 +1,15 @@
 <resources>
-    <!-- Base application theme. -->
+    <!--  Base application theme.  -->
     <style name="Base.Theme.Sensors" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--  Customize your light theme here.  -->
+        <item name="colorPrimary">#068606</item>
+        <!--  Uncomment and customize the colorPrimary  -->
     </style>
-
-    <style name="Theme.Sensors" parent="Base.Theme.Sensors" />
+    <style name="Theme.Sensors" parent="Base.Theme.Sensors"/>
+    <style name="Theme.Sensors.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Sensors.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.Sensors.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>

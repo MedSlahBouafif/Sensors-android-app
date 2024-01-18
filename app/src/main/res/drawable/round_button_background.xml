@@ -1,0 +1,9 @@
+<!-- res/drawable/round_button_background.xml -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/red" />
+    <size
+        android:width="@dimen/_80pxh"
+        android:height="@dimen/_80pxh" />
+</shape>

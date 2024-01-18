@@ -1,0 +1,70 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/centerLayout"
+        android:layout_width="@dimen/_320pxh"
+        android:layout_height="@dimen/_600pxh"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@drawable/category_background"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:background="@drawable/placeholder_image" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/nameLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:padding="8dp" />
+
+        <!-- Age -->
+        <TextView
+            android:id="@+id/ageLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:textStyle="bold"
+            android:textSize="@dimen/_25sp"
+            android:padding="8dp" />
+
+        <!-- About Me -->
+        <TextView
+            android:id="@+id/aboutMeLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Me:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <!-- Add the like and dislike image views -->
+        <ImageView
+            android:id="@+id/imageViewLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fade_right"
+            android:visibility="gone"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/imageViewDislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fade_left"
+            android:visibility="gone"
+            android:padding="8dp" />
+    </LinearLayout>
+</RelativeLayout>

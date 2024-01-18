@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300">
+    <item android:drawable="@android:color/transparent" />
+    <item android:drawable="@drawable/ic_fade_left" />
+    <item android:drawable="@drawable/ic_fade_left" />
+</transition>
